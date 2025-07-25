@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>temp</title>
+</head>
+
+<body>
+    <h1>Hello Counter</h1>
+   <div>Current Value : <span id='val'></span></div>
+   <button id='inc' onclick="increase()">Increment</button>
+   <br />
+
+   <button id='dec' onclick="decrease()"> Decrement</button>
+
+
+   <script>
+    let rand = Math.floor(Math.random()*100+1);
+    document.getElementById("val").innerText = rand;
+
+    function increase(){
+        let val = document.getElementById("val");
+        let value = parseInt(val.innerText);
+        value++;
+        val.innerText = value;
+    }
+    
+    function decrease(){
+        let val = document.getElementById("val");
+        let value = parseInt(val.innerText);
+        if(value === 0 ){
+            alert("Can't go below 0");
+            return;
+        }
+        value--;
+        val.innerText = value;
+    }
+    
+</script>
+
+</body>
+</html>
