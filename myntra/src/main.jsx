@@ -16,7 +16,7 @@ function App(){
 
         <div className="mid">
 
-            {products.map((item,index)=><Card key={index} item={item.name} offer = {item.offer} link = {item.image}/>)}
+            {products.map((item,index)=><Card key={index} item={item.name} offer = {item.offer} price = {item.price} link = {item.image}/>)}
             
         </div>  
         

@@ -6,6 +6,7 @@ function Card(props){
                 <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center" }}>
                     <h3 style={{margin:"3px"}}> {props.item}</h3>
                     <h3 style={{margin:"3px"}}>{props.offer}</h3>
+                    <h3 style={{margin:"3px",color:"green",fontWeight:"1000"}}>Price : {props.price}</h3>
                     <h2 style={{color:"white",backgroundColor:"blue",padding:"4px",borderRadius:"5px"  , margin:"3px"}}>Shop Now</h2>
                 </div>
             </div>
