@@ -54,3 +54,27 @@
      width:"150px";
      background-color:"beige";
 }
+
+button {
+  color: white;
+  padding: 10px 18px;
+  margin: 0px 0px 20px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  background: #22c55e;
+}
+
+/* Increment */
+button:hover {
+  background: #16a34a;
+  box-shadow: 1px 1px 10px rgb(17, 15, 15);
+  transform: scale(1.04);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+button:active{
+    text-shadow: 1px 1px 1px black;
+}
