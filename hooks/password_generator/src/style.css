@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #e5e7eb;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  background: #212121; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.opt{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  margin : 5px;
+}
