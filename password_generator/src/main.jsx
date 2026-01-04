@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client"
 
 const root = document.getElementById("root");
@@ -11,25 +11,27 @@ function GeneratePassword(){
     const [characterChanged,setCharacterChanges] = useState(false);
 
     console.log(length)
-    function generate(){
-        console.log("rend")
+    
+    const generate = useCallback( () =>{
+
         let str =  "abcdefghijklmnopqrsABCDEFGHIJKLMNOPQRSTUVWXYZ";
         if(numberChanged)
             str += "0123456789"
         if(characterChanged)
             str += "!@#$%^&*()_[{}]"
-
+        
         let pass = "";
         for(let i = 0;i<length;i++){
             let char = str[Math.floor(Math.random()*str.length)];
             pass += char;
         }
         setPassword(pass);
-    }
+    },[length,characterChanged,numberChanged]);
+    
 
     useEffect(()=>{
         generate();
-    },[length,characterChanged,numberChanged]);
+    },[generate]);
    
     return (
         <>
