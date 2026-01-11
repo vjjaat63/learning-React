@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+    color: whitesmoke;
+}
+
+.coin{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 2em;
+    box-shadow: 2px 2px 5px gray;
+    padding: 7px;
+    justify-content: center;
+    align-items: center;
+}
+.coins{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
