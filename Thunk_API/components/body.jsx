@@ -5,13 +5,22 @@ import Poster from "./poster";
 
 
 export default function Body(){
-
+    const [count,setCount] = useState(0);
+    // const [input,setInput] = useState(0);
     const {loading,data,error} = useSelector((state) => state.slice1);
     const dispatch = useDispatch();
-    useEffect( ()=>{
-        dispatch(Fetchdata(20));
-    },[]);
 
+    // useEffect( ()=>{
+    //     if(count>0)
+    //         dispatch(Fetchdata(count));
+    // },[count]);
+
+    const Handle = ()=>{
+        if(count>0)
+            dispatch(Fetchdata(count));
+    }
+
+    console.log(count);
     // Displaying data
 
     if(loading){
@@ -23,6 +32,9 @@ export default function Body(){
     
     return (
         <>
+        <input type="text" placeholder="Input number of coins needed" onChange={(e)=>setCount(Number(e.target.value))}/>
+        <button onClick = {Handle}> Submit</button>
+
         <div className="coins">
             {
             data.map(coin =>  {
